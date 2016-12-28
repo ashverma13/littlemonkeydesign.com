@@ -1,0 +1,106 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+body {
+  background: @white;
+  padding-top: 0;
+}
+
+.t3-mainbody {
+  margin-top: 0;
+}
+
+.item-page .item-image {
+  max-width: 100%;
+}
+
+.item-page .item-image img {
+  width: 100%;
+}
+
+.component .view-article .item-page {
+  background: @white;
+}
+
+.t3-content {
+  padding-top: @T3globalPadding;
+  padding-bottom: @T3globalPadding;
+}
+
+
+// Print Article
+// -------------
+.view-article {
+  .list-icons {
+    background: none;
+    left: auto;
+    height: 30px;
+    position: fixed;
+    top: @baseLineHeight;
+    right: @baseLineHeight;
+    width: 30px;
+    
+    .addthis_toolbox {
+      display: none;
+    }
+
+    .menu-edit ul li a {
+      background: none;
+      color: @T3primaryColor;
+      height: 30px;
+      width: 30px;
+      line-height: 30px;
+      // Link States
+      &:hover, &:focus, &:active {
+        background: none;
+        color: @linkColorHover;
+      }
+    }
+  }
+  .fb-comments {
+    display: none;
+  }
+}
+
+.component.view-article .item-page{
+  padding-left: @T3globalPadding;
+  padding-right: @T3globalPadding;
+}
+
+.component.view-article.layout-default article img[align="left"], 
+.component.view-article.layout-default .img_caption.left, 
+.component.view-article.layout-default .pull-left.item-image {
+  margin: 0 20px 20px 0 !important;
+}
+.component.view-article.layout-default article img[align="right"], 
+.component.view-article.layout-default .img_caption.right, 
+.component.view-article.layout-default .pull-right.item-image {
+  margin: 0 0 20px 20px !important;
+}
+
+.component.com_jshopping.task-view {
+  .t3-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.component.view-article .list-icons .menu-edit {
+  display: block;
+  ul li a {
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    text-indent: -999em;
+    color: @gray;
+    text-decoration: none;
+    i {
+      font-size: 14px;
+      font-weight: normal;
+    }
+    &:hover, &:focus, &:active {
+      color: @T3primaryColor;
+    }
+  }
+}

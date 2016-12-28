@@ -1,0 +1,214 @@
+
+
+.ja-ss-slideshow {
+  position: relative;
+  height: 309px;
+}
+.ja-ss-loading:before {
+  content: "";
+  display: block;
+  background: url("../../../images/slideshow/slideloading.gif") transparent no-repeat center center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.ja-ss-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.ja-ss-items {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.ja-ss-item {
+  display: block;
+  float: left;
+  left: 0;
+  margin: 0;
+  min-height: 260px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.ja-ss-item.prev,
+.ja-ss-item.next {
+  display: block;
+}
+.ja-ss-item.curr {
+  
+  z-index: 2;
+}
+.ja-ss-item img {
+  background: #111;
+  max-width: 100%;
+  width: 100%;
+}
+.ja-ss-desc {
+  background-clip: padding-box;
+  
+  background: rgba(0,0,0,0.8);
+  
+  background: #000\9;
+  bottom: 40px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  left: 0px;
+  position: absolute;
+  padding: 30px 30px 30px 40px;
+  text-align: left;
+  width: 66.5%;
+  
+  -webkit-box-sizing: border-box;
+  
+  -moz-box-sizing: border-box;
+  
+  box-sizing: border-box;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.ja-ss-desc h3 {
+  color: #fff;
+  line-height: 1;
+  font-size: 24px;
+  font-family: 'novecento_widedemibold', sans-serif;
+  margin: 0 0 10px;
+}
+.ja-ss-desc h3 a {
+  color: #fff;
+  line-height: normal;
+  text-decoration: none;
+}
+.ja-ss-desc p {
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0;
+}
+.ja-ss-btns {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 10;
+}
+.ja-ss-btns span {
+  background: url("../../../images/slideshow/ctrl-btns.png") no-repeat top left;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  width: 40px;
+  text-indent: -999em;
+}
+.ja-ss-btns .ja-ss-prev {
+  background-position: 0 0;
+}
+.ja-ss-btns .ja-ss-prev:hover {
+  background-position: left bottom;
+}
+.ja-ss-btns .ja-ss-next {
+  background-position: -40px 0;
+}
+.ja-ss-btns .ja-ss-next:hover {
+  background-position: -40px bottom;
+}
+.ja-ss-btns .ja-ss-stop {
+  background-position: -80px 0;
+}
+.ja-ss-btns .ja-ss-stop:hover {
+  background-position: -80px bottom;
+}
+.ja-ss-btns .ja-ss-play {
+  background-position: -120px bottom;
+}
+.ja-ss-btns .ja-ss-play:hover {
+  background-position: -120px bottom;
+}
+.ja-ss-btns .ja-ss-playback {
+  background-position: right 0;
+}
+.ja-ss-btns .ja-ss-playback:hover {
+  background-position: right bottom;
+}
+.ja-ss-thumbs-wrap {
+  bottom: 53px;
+  position: absolute;
+  right: 135px !important;
+  left: auto !important;
+  z-index: 2;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: auto;
+  white-space: nowrap;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb {
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1;
+  margin: 0 0 0 5px;
+  position: relative;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb span {
+  background: url("../../../images/slideshow/thumb-bg.png") no-repeat center center;
+  display: block;
+  height: 15px;
+  width: 15px;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb img {
+  background: #fff;
+  display: block;
+  left: -15px;
+  max-width: none !important;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  top: -75px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb:hover span:before {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content: "";
+  height: 0;
+  margin-left: 3px;
+  position: absolute;
+  top: -5px;
+  width: 0;
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb:hover img {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb.active span {
+  background-image: url("../../../images/slideshow/thumb-active-bg.png");
+}
+#fixel-grid .ja-ss-wrap.fade {
+  opacity: 0;
+}
+#fixel-grid.ready .ja-ss-wrap.fade {
+  opacity: 1;
+}
+

@@ -1,0 +1,253 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+//
+// GENERIC  STYLES
+// ---------------------------------------------------------
+
+
+//
+// LIGHT MAINNAV FOR NORMAL SCREEN AND ABOVE
+// -------------------------------------------------------------
+@media  (min-width: @aboveNavbarCollapseWidth) {
+  html .t3-mainnav.light-mainnav .logo-image a {
+    background-image: url("@{T3ThemeImagePath}/logo-light.png") !important;
+  }
+}
+
+.t3-module .nav {
+  li {
+    a:hover, a:focus,a:active {
+      background-image: url("@{T3ThemeImagePath}/folder-hover.png");
+    }
+  }
+
+  li.dropdown.open > .dropdown-toggle, 
+  li.dropdown.active > .dropdown-toggle, 
+  li.dropdown.open.active > .dropdown-toggle, 
+  > li.dropdown.open.active > a:hover {
+    background-image: url("@{T3ThemeImagePath}/folder-hover.png");
+  }
+}
+
+.t3-module ul.archive-module,
+.archive-module {
+  list-style: none;
+  margin: 0;
+  li {
+    a {
+      // Link States
+      &:hover, &:focus, &:active {
+        background-image: url("@{T3ThemeImagePath}/calendar-hover.png");
+      }
+    }
+  }
+}
+
+// Slideshow
+// ---------
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb.active span {
+  background-image: url("@{T3ThemeImagePath}/thumb-active-bg.png");
+}
+
+//
+// JSHOPPING
+// ------------------------------------------------------
+.productfull .prod_buttons .prod_addtocart .btn-wishlist {
+  color: @linkColor;
+}
+
+span.jshop_error {
+  color: @linkColor;
+}
+
+table.jshop_checkout {
+  border-color: @linkColor;
+}
+
+.jshop .cart .product_name a :hover {
+  color: @linkColor;
+}
+
+.downlod_order_invoice a {
+  background: @linkColor;
+  color: @black;
+}
+
+.jshop .product_label .label_name {
+  color: @linkColor;
+}
+
+.jshop_list_product .product .image .name a:hover,
+.jshop_list_product .product .image .name a:focus,
+.jshop_list_product .product .image .name a:active {
+  color: @linkColor;
+}
+
+.jshop_list_product .product .image .jshop_price {
+  color: @linkColor;
+}
+
+#jshop_summ_product {
+  color: @linkColor;
+}
+
+#jshop_module_cart a {
+  background-color: @linkColor;
+  border-color: @linkColor;
+  color: @black;
+}
+
+#jshop_module_cart a:hover,
+#jshop_module_cart a:focus,
+#jshop_module_cart a:active {
+  background-color: @linkColorHover;
+  color: @black;
+}
+
+.bestseller_products .block_item .item_name a:hover, 
+.bestseller_products .block_item .item_name a:focus, 
+.bestseller_products .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.bestseller_products .block_item  .item_price {
+  color: @linkColor;
+}
+
+.top_rating .block_item .item_name a:hover, 
+.top_rating .block_item .item_name a:focus, 
+.top_rating .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.top_rating .block_item  .item_price {
+  color: @linkColor;
+}
+
+.latest_products .block_item .item_name a:hover, 
+.latest_products .block_item .item_name a:focus, 
+.latest_products .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.latest_products .block_item  .item_price {
+  color: @linkColor;
+}
+
+.jshopping-content-right .prod_price {
+  color: @linkColor;
+}
+
+.jshopping-content-right .qty_in_stock #product_qty {
+  color: @linkColor;
+}
+
+table.jshop #checkout .td_2 a {
+  background-color: @linkColor;
+  border-color: @linkColor;
+  color: @black;
+}
+
+.register_block span.small_header {
+  border-color: @linkColor;
+}
+
+.com_jshopping.task-login .jshop {
+  background: @linkColor;
+  color: @black;
+}
+
+.downlod_order_invoice a:hover {
+  background: @linkColorHover;
+  color: @black;
+}
+
+table.jshop #checkout .td_2 a:hover {
+  background: @linkColorHover;
+  border-color: @linkColorHover;
+  color: @black;
+}
+
+
+
+//
+// EasyBlog
+// ------------------------------------------------------
+#ezblog-menu .blog-navi .user-form form .button {
+  background-color: @linkColor !important;
+}
+
+#ezblog-menu .blog-navi .user-form form a {
+  color: @linkColor !important;
+}
+
+#ezblog-body ul.featured-entries .featured-title a:hover, 
+#ezblog-body ul.featured-entries .featured-title a:focus, 
+#ezblog-body ul.featured-entries .featured-title a:active {
+  color: @linkColor;
+}
+
+//
+// EasyBlog
+// ------------------------------------------------------
+#ezblog-menu .blog-navi .user-form form .button {
+  background-color: @linkColor !important;
+}
+
+#ezblog-menu .blog-navi .user-form form a {
+  color: @linkColor !important;
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item a:hover,
+.com_easyblog .mod_easyblogcategories .mod-item a:focus,
+.com_easyblog .mod_easyblogcategories .mod-item a:active {
+  color: @linkColor;
+}
+
+.mod_easyblogtagcloud .tag-cloud a:hover, 
+.mod_easyblogtagcloud .tag-cloud a:focus, 
+.mod_easyblogtagcloud .tag-cloud a:active {
+  color: @linkColor;
+}
+
+#eblog-wrapper .list-pagination li a:hover {
+  border-top-color: @linkColor;
+}
+
+
+#ezblog-body .blog-post .blog-title a:hover, 
+#ezblog-body .blog-post .blog-title a:focus, 
+#ezblog-body .blog-post .blog-title a:active {
+  color: @linkColor;
+}
+
+
+#ezblog-body ul.featured-entries .featured-title a:hover, 
+#ezblog-body ul.featured-entries .featured-title a:focus, 
+#ezblog-body ul.featured-entries .featured-title a:active {
+  color: @linkColor;
+}
+
+#ezblog-body .featured-a a span {
+  background-image: url("@{T3ThemeImagePath}/featured-bullets.png") !important;
+}
+
+#ezblog-body ul.featured-entries .featured-image + .featured-meta {
+  background-image: url("@{T3ThemeImagePath}/featured-arrow.png") !important;
+}
+
+.com_easyblog .mod_easyblogarchive .mod-year a i {
+  background-image: url("@{T3ThemeImagePath}/mod.toggle.png") !important;
+}

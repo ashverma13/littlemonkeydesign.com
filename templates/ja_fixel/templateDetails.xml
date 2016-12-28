@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name>ja_fixel</name>
+	<version>1.0.4</version>
+	<creationDate>11 Mar 2014</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base</base>
+	</t3>
+	<description>
+		<![CDATA[
+			<div class="overview-header">
+			<h2>
+			  <small style="display: block;">Responsive business ecommerce template for Joomla! 2.5 & 3.2 - <strong>JA Fixel</strong>.</small>
+			</h2>
+			<p>Need an innovative design for your business website? The answer is <strong>JA Fixel</strong>. <strong>JA Fixel</strong> has an innovative design with Grid View homepage for images, texts, galleries and videos display. The template supports lively annimations for each grid which will amaze your viewers. This Joomla template integrates an online store with ful functions using jShopping.</p>
+			<p>Built on the robust T3 Framework, the template is fullly responsive and supports RTL language layout. <strong>JA Fixel</strong> features sticky mega menu, Easyblog, Filter Tag Cloud (applied for Joomla 3.x only). The template does not support K2 component.</p>
+			<p><i><strong>Note:</strong> JA Fixel is support RTL language.</i></p>
+		  </div>
+				]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>thememagic.xml</filename>
+		<filename>templateInfo.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateHelper.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>js</folder>
+		<folder>less</folder>
+		<folder>images</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_fixel.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_fixel.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>mainnav</position>
+		<position>navhelper</position>
+		<position>breadcrumbs</position>
+		<position>sidebar-2</position>
+		<position>home-1</position>
+		<position>social-link</position>
+		<position>footer</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>sitemapload</position>
+		<position>mycart</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-7</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>bookmark-jshopping</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+			
+			<!-- add more custom template parameter -->
+			<fieldset name="general_params">
+				<field name="tpl_extended_params" type="t3depend" function="@legend"
+					label="TPL_PARAMS_SECTION_LABEL"
+					description="TPL_PARAMS_SECTION_DESC"/>
+
+				<!-- disabled popup -->
+				<field name="tpl_enable_popup" type="radio" class="btn-group" default="1"
+					global="1"
+					label="TPL_ENABLE_POPUP_VIEW_LABEL"
+					description="TPL_ENABLE_POPUP_VIEW_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<!-- disabled jquery.address -->
+				<field name="tpl_change_url" type="radio" class="btn-group" default="1"
+					global="1"
+					label="TPL_ENABLE_CHANGEURL_LABEL"
+					description="TPL_ENABLE_CHANGEURL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<!-- additional positions -->
+				<field name="tpl_additional_positions" type="list" multiple="true" default=""
+					global="1"
+					label="TPL_ADDITIONAL_POS_LABEL"
+					description="TPL_ADDITIONAL_POS_DESC">
+					<option value="home-1">Home 1</option>
+					<option value="home-2">Home 2</option>
+					<option value="home-3">Home 3</option>
+					<option value="home-4">Home 4</option>
+					<option value="home-5">Home 5</option>
+					<option value="home-6">Home 6</option>
+					<option value="home-7">Home 7</option>
+					<option value="home-8">Home 8</option>
+					<option value="home-9">Home 9</option>
+				</field>
+
+				<!-- facebook comment -->
+				<field name="general_params_facebook" type="t3depend" function="@group">
+					<option for="tpl_facebook_comment" value="1">
+						tpl_facebook_appid
+					</option>
+				</field>
+
+				<field name="tpl_facebook_comment" type="radio" class="btn-group" default="1"
+					global="1"
+					label="TPL_ENABLE_FBCOMMENT_LABEL"
+					description="TPL_ENABLE_FBCOMMENT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="tpl_facebook_appid" type="text" default=""
+					global="1"
+					label="TPL_FBAPPID_LABEL"
+					description="TPL_FBAPPID_DESC" />
+
+				<field name="tpl_show_tagfilter" type="radio" class="btn-group" default="1"
+					global="1"
+					label="TPL_ENABLE_TAG_FILTER_LABEL"
+					description="TPL_ENABLE_TAG_FILTER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+			</fieldset>
+
+			<fieldset name="navigation_params">
+				
+				<field name="tpl_extended_params" type="t3depend" function="@legend"
+					label="TPL_PARAMS_SECTION_LABEL"
+					description="TPL_PARAMS_SECTION_DESC"/>
+
+				<field name="tpl_navigation_infinity" type="radio" class="btn-group" default="1"
+					global="1"
+					label="TPL_ENABLE_INFINITY_LABEL"
+					description="TPL_ENABLE_INFINITY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+			</fieldset>	
+
+		</fields>
+	</config>
+	
+</extension>

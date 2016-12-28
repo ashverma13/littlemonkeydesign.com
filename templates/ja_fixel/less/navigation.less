@@ -1,0 +1,314 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// -------------------------------------------------------
+//  JA MAIN MENU
+// -------------------------------------------------------
+.t3-mainnav {
+  background: @navbarBackground;
+  border-bottom: 1px solid #1d1d1d;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-bottom: 0;
+  z-index: 1030;
+  position: absolute;
+
+  .translate(0, 0%);
+
+  .box-shadow(0 0 8px rgba(0, 0, 0, 0.8));
+
+  -webkit-transition-property: background, border, -webkit-transform; 
+   -moz-transition-property: background, border, transform; 
+    -ms-transition-property: background, border, -ms-transform; 
+     -o-transition-property: background, border, -o-transform; 
+        transition-property: background, border, transform;
+
+  -webkit-transition-duration: 600ms; 
+   -moz-transition-duration: 600ms; 
+    -ms-transition-duration: 600ms; 
+     -o-transition-duration: 600ms; 
+        transition-duration: 600ms;
+
+  -webkit-transition-timing-function: ease-out; 
+   -moz-transition-timing-function: ease-out; 
+    -ms-transition-timing-function: ease-out; 
+     -o-transition-timing-function: ease-out; 
+        transition-timing-function: ease-out;
+
+  .container {
+    background: @navbarBackground;
+    padding-left: 0;
+    padding-right: 0;
+    .transition(background-color 0.6s ease-out);
+  }
+
+  .navbar {
+    color: @navbarText;
+    font-family: @TPLNWDemiBold;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .navbar-inner {
+    min-height: @navbarHeight;
+    padding:  0;
+    background: transparent;
+    border: 0;
+    .border-radius(0);
+    .box-shadow(none);
+    .reset-filter();
+  }
+
+
+  // NAVBAR
+  // -------------------------------------------------------
+  .navbar .nav {
+    margin: 0;
+  }
+
+
+  // Links
+  // -----
+  .navbar .nav > li {
+    margin: 0 (@T3globalMargin*0.75);
+  }
+
+  .navbar .nav > li > a {
+    background: #111;
+    border-top: 0;
+    font-size: @T3smallFontSize;
+    font-weight: 300;
+    padding: @T3globalPadding 0;
+    position: relative;
+    text-shadow: none;
+     -webkit-transition-duration: 600ms; 
+   -moz-transition-duration: 600ms; 
+    -ms-transition-duration: 600ms; 
+     -o-transition-duration: 600ms; 
+        transition-duration: 600ms;
+
+  -webkit-transition-timing-function: ease-out; 
+   -moz-transition-timing-function: ease-out; 
+    -ms-transition-timing-function: ease-out; 
+     -o-transition-timing-function: ease-out; 
+        transition-timing-function: ease-out;
+    //Afer 
+    &:after {
+      background: @navbarLinkColorHover;
+      bottom: 15px;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      .transition(all 0.4s ease-out);
+      width: 0;
+    }
+  }
+
+  .navbar .nav > li > span.separator {
+    border-top: 0;
+    display: inline-block;
+    font-size: @T3smallFontSize;
+    font-weight: 300;
+    padding: @T3globalPadding 0;
+    position: relative;
+    text-shadow: none;
+  }
+  // Hover
+  .navbar .nav > li:hover >a {
+    background: #111;
+    &:after {
+      width: 100%;
+    }
+  }
+
+  .navbar .nav > li > a:focus,
+  .navbar .nav > li > a:hover {
+    background: #111;
+    text-shadow: none;
+    outline: none;
+  }
+
+  // Active nav items
+  .navbar .nav > .active > a,
+  .navbar .nav > .active > a:hover,
+  .navbar .nav > .active > a:focus {
+    background: #111;
+    color: @navbarLinkColorActive;
+    outline: none;
+    text-shadow: none;
+    .box-shadow (none);
+	  &:after {
+      background-color: @navbarLinkColorActive;
+      width: 100%;
+    }
+  }
+
+  // Toggle Button
+  // -------------
+
+  // Navbar button for toggling navbar items in responsive layouts
+  // These definitions need to come after '.navbar .btn'
+  .navbar .btn-navbar {
+    background: #111;
+    border: none;
+    border-right: solid 1px #1d1d1d;
+    color: @white;
+    float: left;
+    font-size: 16px;
+    padding: @T3globalPadding;
+    margin: 0 -(@T3globalMargin*0.75) 0;
+    .box-shadow(none);
+    
+    // The icon
+    [class^="icon-"],
+    [class^=" icon-"] {
+      color: @white;
+      font-size: 16px;
+      text-shadow: none;
+    }
+  }
+
+
+  // DROPDOWN
+  // ------------------------------------------------------
+
+  // Dropdown arrow/caret
+  // --------------------
+  .caret {
+  }
+
+  // Place the caret
+  .dropdown .caret {
+    margin-left: 5px;
+  }
+
+
+  // The dropdown menu
+  // -----------------
+  .dropdown-menu {
+    background: #111;
+    border: solid 1px #1d1d1d;
+    .border-radius(0);
+    .box-shadow(0 1px 0 rgba(0, 0, 0, 0.3));
+
+    // Links within the dropdown menu
+    li > a {
+      border-top: 1px solid #1d1d1d;
+      color: @white;
+      font-family: @baseFontFamily;
+      padding: (@T3globalPadding / 2);
+      text-shadow: none;
+      text-transform: normal;
+      .opacity(70);
+      &:hover, &:focus, &:active {
+        .opacity(100);
+      }
+    }
+  }
+
+  // No border top on the first
+  .dropdown-menu li:first-child > a {
+    border-top: 0;
+  }
+
+  // Hide the Top arrow of the dropdown menu.
+  // See bootstrap/navbar.less or comment these line if you want to show it again.
+  .navbar .nav > li > .dropdown-menu {
+    &:before {
+      display: none;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+
+  // Hover state
+  // -----------
+  .dropdown-menu li > a:hover,
+  .dropdown-menu li > a:focus,
+  .dropdown-submenu:hover > a {
+  }
+
+
+  // Active state
+  // ------------
+  .dropdown-menu .active > a,
+  .dropdown-menu .active > a:hover {
+  }
+
+
+  // Disabled state
+  // --------------
+  .dropdown-menu .disabled > a,
+  .dropdown-menu .disabled > a:hover {
+    color: @grayLight;
+  }
+
+  .dropdown-menu .disabled > a:hover {
+    background-color: transparent;
+  }
+
+
+  // Open State
+  // ----------
+  .nav li.dropdown.open > .dropdown-toggle {
+    background: #111;
+    color: @navbarLinkColorHover;
+  }
+
+  // Active Open
+  .nav li.dropdown.active > .dropdown-toggle,
+  .nav li.dropdown.open.active > .dropdown-toggle {
+    background: #111;
+    color: @navbarLinkColorActive;
+  }
+
+  // The Caret
+  .nav li.dropdown > .dropdown-toggle .caret {
+  }
+
+  .navbar .nav li.dropdown.open > .dropdown-toggle .caret {
+    border-bottom-color: @navbarLinkColorHover;
+    border-top-color: @navbarLinkColorHover;
+  }
+
+  .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+    border-bottom-color: @navbarLinkColorActive;
+    border-top-color: @navbarLinkColorActive;
+  }
+}
+
+.navbar-inner {
+  .mainnav-wrap  {
+    .dropdown-menu li > a {
+      border-bottom: 1px solid #1D1D1D;
+      padding-right: 20px;
+    }
+  }
+}
+
+.t3-mainnav.light-mainnav {
+  .dropdown-menu li > a {
+    color: @gray;
+    border-bottom: none;
+    border-top-color: #e7e7e7;
+  }
+}
+
+.t3-mainnav .dropdown-submenu > .dropdown-menu {
+  margin-top: 0;
+}
+
+/* IE8 (via Keith Clarke) */
+@ie8hackscreen: ~"\0screen";
+@media @ie8hackscreen { 
+  .t3-mainnav.light-mainnav {
+    top: 0;
+  }
+}

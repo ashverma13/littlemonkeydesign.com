@@ -1,0 +1,501 @@
+// RTL STYLES
+// ------------------------------------------------------
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  margin: 0 @gridGutterWidth @T3globalMargin 0;
+  float: left;
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  margin: 0 0 @T3globalMargin @gridGutterWidth;
+  float: right;
+}
+
+.languageswitcherload {
+  ul {
+    float: left;
+  }
+}
+
+.icon-chevron-left:before {
+  content: "\f054";
+}
+
+.icon-chevron-right:before {
+  content: "\f053";
+}
+
+.edit.item-page form .nav.nav-tabs li a {
+  direction: ltr;
+}
+
+.list-icons {
+  
+  .addthis_32x32_style .at15t_facebook.at300bs.at15nc {
+    background-position: -60px 0 !important;
+
+    // Link States 
+    &:hover, &:focus, &:active {
+      background-position: 0 0 !important;
+    }
+  }
+
+  .addthis_32x32_style .at15t_twitter.at300bs.at15nc {
+    background-position: -60px -60px !important;
+
+    // Link States 
+    &:hover, &:focus, &:active {
+      background-position: 0 -60px !important;
+    }
+  }
+
+  .addthis_32x32_style .at15t_google_plusone_share.at300bs.at15nc {
+    background-position: -60px -120px !important;
+
+    // Link States 
+    &:hover, &:focus, &:active {
+      background-position: 0 -120px !important;
+    }
+  }
+}
+
+
+// ------------------------------------------------------
+// EASYSHOP RTL STYLES
+// ------------------------------------------------------
+#eblog-wrapper .si-optiontap {
+  float: right;
+}
+
+body #ezblog-dashboard li .ui-button-option .ui-clock {
+  padding-right: 0;
+  padding-left: 20px;
+  background-position: left center;
+}
+
+body #ezblog-dashboard .ui-button-option .buttons.sibling-r, body #ezblog-dashboard .ui-button-option .buttons.sibling-r.close {
+}
+
+#eblog-wrapper .ui-button-option  li {
+  float: left;
+}
+
+body #ezblog-dashboard .buttons.sibling-m {
+  border-left: 1px solid #aaa;
+}
+
+#ezblog-dashboard .item_list {
+  direction: ltr;
+}
+
+#ezblog-dashboard .item_list li {
+  direction: rtl;
+}
+
+#blog-login .blog-login-helper li + li {
+  margin-left: 0;
+  margin-right: 25px;
+}
+
+#ezblog-dashboard .write-postauthor #author-avatar {
+  width: 16px;
+  height: 16px;
+  direction: ltr;
+}
+
+#eblog-wrapper .list-form li > label, #eblog-dialog .list-form li > label {
+  text-align: right;
+}
+
+#ezblog-dashboard .ui-modbox {
+  direction: ltr;
+}
+
+#ezblog-dashboard .ui-modbox > div {
+  direction: rtl;
+}
+
+#ezblog-body .profile-sidebar {
+  float: right;
+}
+
+
+#ezblog-posts .blog-post .blog-post-in .blog-image {
+  margin-left: 40px !important; 
+  margin-right: 0 !important;
+}
+
+#eblog-wrapper .blog-content-wrap .blog-header, 
+#eblog-wrapper .blog-content-wrap .blog-content {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+// ------------------------------------------------------
+// JSHOPPING RTL STYLES
+// ------------------------------------------------------
+.jshopping-content-left {
+  float: right;
+}
+
+.jshopping-content-right {
+  float: left;
+}
+
+#list_product_image_middle {
+  margin-right: 0;
+  margin-left: @T3globalMargin * 3;
+}
+
+span.prod_attr_img, .jshop .list_product_demo .download, .shipping_weight_to_price .price {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.productfull .prod_buttons .prod_addtocart .or {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.jshopping-content-right .qty_in_stock {
+  float: right;
+}
+
+.jshopping-content-right table.rating {
+  float: right;    
+  margin-left: 0;
+  margin-right: @T3globalMargin;
+}
+
+.jshopping-content-right table.rating .stars_no_active {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.jshop_list_product .jshop_related {
+  float: right;
+}
+
+tr#checkout td.td_1 {
+  text-align: right;
+}
+
+tr#checkout td.td_2 {
+  text-align: left;
+}
+
+table.jshop #checkout .td_1 img {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+table.jshop #checkout .td_2 {
+  padding-left: 0;
+}
+
+.jshop.productfull {
+  padding-left: @T3globalPadding*3;
+  padding-right: @T3globalPadding*6;
+  .list-icons {
+    left: auto;
+    right: 0;
+  }
+}
+.jshop .product_label {
+  left: 0;
+  right: auto;
+}
+
+#list_product_image_middle {
+  direction: ltr;
+}
+
+#list_product_image_thumb {
+  direction: ltr;
+  > span,
+  > span, img {
+    direction: ltr;
+  }
+}
+
+.top_rating .block_item .item_image,
+.latest_products .block_item .item_image {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.jshop_menu_level_0 a, 
+.jshop_menu_level_1_a a, 
+.jshop_menu_level_2_a a {
+  background-position: right center; 
+  padding-left: 0;
+  padding-right: 24px;
+}
+
+#form-login > div {
+  text-align: right !important;
+}
+
+.jshop .downlod_order_invoice, 
+.vendordetailinfo .vendor_logo {
+  float: left;
+}
+
+td.jshop_img_description_center,
+.table_order_list td {
+  text-align: right;
+}
+
+.star-rating-control {
+  text-align: left;
+}
+
+div.star-rating {
+  direction: ltr;
+}
+
+div.star-rating-on a {
+  float: left;
+  direction: ltr;
+  display: inline-block;
+}
+
+#mycart .dropdown-menu {
+  right: auto;
+  left: 0;
+  .transition(none);
+  .opacity(0)
+}
+
+#mycart.open .dropdown-menu {
+  right: auto;
+  left: 0;
+  .opacity(100);
+}
+
+// Tooltips
+// ---------------------------------------------------------
+.tip-wrap {
+  left: 0;
+}
+
+
+// Google oauth iframe
+// ---------------------------------------------------------
+iframe[name*=oauth2relay] {
+  top: -10000px;
+  left: 0 !important;
+}
+
+
+// ---------------------------------------------------------
+// POPUP CONTENT
+// ---------------------------------------------------------
+.popupview {
+
+  .popup-inner {
+
+    &.current {
+      .translate(0%, 0%);
+    }
+
+    &.prev {
+      .translate(125%, 0%);
+    }
+
+    &.next {
+      .translate(-260%, 0%);
+    }
+  }
+}
+
+#popup-prev:before {
+  content: @chevron-right;
+}
+
+#popup-next:before {
+  content: @chevron-left;
+}
+
+
+
+// ---------------------------------------------------------
+// LOGIN
+// ---------------------------------------------------------
+.login_block table td label {
+  margin-right: 0 !important; 
+  margin-left: 2px !important;
+}
+
+.login_block table td input#remember_me {
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+
+// ---------------------------------------------------------
+// SMART SEARCH
+// ---------------------------------------------------------
+
+.off-canvas body > .autocompleter-choices {
+  width: 0px;
+  left: auto;
+}
+
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media  (max-width: 1024px) { 
+  .com_finder.view-search .main-content .finder {
+    width: 100% !important;
+  }
+
+  .module.no-padding {
+    display: none;
+  }
+
+  #socialbutton.alignleft + .blog-text {
+    margin-left: 0 !important;
+  }
+
+}
+
+
+
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media (min-width: 768px) and (max-width: 979px) {
+  #ezblog-menu.narrow .blog-navi li .tips {
+    width: 90%;
+  }
+
+  #eblog-wrapper #ezblog-posts .blog-content-wrap {
+    width: 100% !important;
+    float: right;
+  }
+
+  #eblog-wrapper.w320 .ui-modbody .list-form li > label,
+  #eblog-dialog .ui-modbody .list-form li > label {
+    text-align: right;
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .blogImage + .blogTitle {
+    margin-right: 0 
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .blogImage + .blogTitle #title {
+    margin-top: 10px;
+    width: 95% !important;
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .write-selectreaders #private {
+    margin-top: 10px;
+    width: 95% !important;
+  }
+
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li > div {
+    width: 100%;
+  }
+
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.settings  > div,
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.micro-post  > div,
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.new-post  > div {
+    width: 96%;
+  }
+}
+
+
+
+//
+// IPHONE
+// -------------------------------------------------------------
+@media  (max-width: 767px) { 
+  .client img[align="left"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .box .box-spotlight .box-inner {
+    padding-left: 0 !important; 
+    padding-right: 0 !important;
+  }
+
+  .view-article .popup-body .fb-comments, .item-page .fb-comments,
+  .fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget iframe[style] {
+    right: 0 !important;
+  }
+
+  #ezblog-menu.narrow .blog-navi li .tips {
+    width: 93%;
+  }
+
+  #eblog-wrapper #ezblog-posts .blog-content-wrap {
+    width: 100% !important;
+    float: right;
+  }
+
+  #eblog-wrapper.w320 .ui-modbody .list-form li > label,
+  #eblog-dialog .ui-modbody .list-form li > label {
+    text-align: right;
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .blogImage + .blogTitle {
+    margin-right: 0 
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .blogImage + .blogTitle #title {
+    margin-top: 10px;
+    width: 95% !important;
+  }
+
+  #eblog-wrapper.w320 #ezblog-dashboard .write-selectreaders #private {
+    margin-top: 10px;
+    width: 95% !important;
+  }
+
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li > div {
+    width: 100%;
+  }
+
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.settings  > div,
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.micro-post  > div,
+  #ezblog-dashboard #eb-topbar.narrow .ui-toolbar li.new-post  > div  {
+    width: 96%;
+  }
+
+}
+
+
+//
+// IPHONE
+// -------------------------------------------------------------
+@media  (max-width: 480px) { 
+  #eblog-wrapper .float-l, #eblog-wrapper .alignleft {
+    float: none !important;
+  }
+
+  #socialbutton.alignleft + .blog-text {
+    margin-left: 0 !important;
+  }
+
+  
+}
+
+//
+// IPHONE
+// -------------------------------------------------------------
+@media  (max-width: 360px) { 
+  #ezblog-menu.narrow .blog-navi li .tips {
+    width: 87%;
+  }
+}

@@ -1,0 +1,635 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+//
+// GENERIC  STYLES
+// ---------------------------------------------------------
+body,
+.fixel-grid,
+#fixel-placeholder {
+  background-image: url(@T3bodyBackgroundImage);
+}
+
+// ---------------------------------------------------------
+// HEADER
+// ---------------------------------------------------------
+.t3-mainnav {
+  border-bottom: 3px solid #E7E7E7;
+
+  &:hover, &:focus, &:active {
+    .reset-filter();
+  }
+
+  .container {
+  }
+
+  .navbar .nav > .active > a, 
+  .navbar .nav > .active > a:hover, 
+  .navbar .nav > .active > a:focus {
+    color: @linkColor;
+    background: @white;
+  }
+
+  .nav li.dropdown.open > .dropdown-toggle .caret,
+  .nav li.dropdown.active > .dropdown-toggle .caret,
+  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+    border-bottom-color: @linkColor;
+    border-top-color: @linkColor;
+  }
+  
+
+  // Open State
+  // ----------
+  .nav li.dropdown.open > .dropdown-toggle {
+    color: @linkColor;
+    background: @white;
+    .opacity(100);
+  }
+
+
+  .nav li.dropdown.active > .dropdown-toggle, 
+  .nav li.dropdown.open.active > .dropdown-toggle {
+    background: @white;
+  }
+
+  // Links
+  // -----
+  .navbar .nav > li {
+    margin: 0 (@T3globalMargin*0.75);
+  }
+
+  .navbar .nav > li > a {
+    background: @white;
+    color: @gray;
+    .opacity(100);
+    //Afer 
+    &:after {
+      background: @linkColor;
+      .opacity(100);
+    }
+    //Link States
+    &:hover, &:focus, &:active {
+      background: @white;
+      color: @linkColor;
+      .opacity(100);
+      &:after {
+      background: @linkColor;
+      .opacity(100);
+      }
+    }
+  }
+
+  .navbar .nav > .active > a {
+    background: @white;
+    color: @linkColor;
+    .opacity(100);
+
+    //Afer 
+    &:after {
+      background: @linkColor;
+      .opacity(100);
+    }
+  }
+
+  .dropdown-menu {
+    background: @white;
+    border-color: #e7e7e7;
+  }
+
+  .t3-megamenu .mega-nav .mega-group > .mega-group-title, 
+  .t3-megamenu .dropdown-menu .mega-nav .mega-group > .mega-group-title, 
+  .t3-megamenu .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+    color: @gray;
+    border-color: #e7e7e7;
+    &:hover, &:focus, &:active {
+      color: @gray;
+      background: none;
+    }
+  }
+
+  .t3-megamenu .mega-nav > li a, 
+  .t3-megamenu .dropdown-menu .mega-nav > li a {
+    border-color: #e7e7e7;
+    color: @black;
+    &:hover, &:focus, &:active {
+      color: @linkColor;
+    }
+  }
+
+  .t3-megamenu .mega-nav > li.active a, 
+  .t3-megamenu .dropdown-menu .mega-nav > li.active a {
+    color: @linkColor;
+    &:hover, &:focus, &:active {
+      color: @linkColor;
+    }
+  }
+
+  .nav li.dropdown.active > .dropdown-toggle, 
+  .nav li.dropdown.open.active > .dropdown-toggle {
+    color: @linkColor;
+  }
+
+  .navbar .nav li.dropdown.active > .dropdown-toggle .caret, 
+  .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret,
+  .navbar .nav li.dropdown.open > .dropdown-toggle .caret {
+    border-bottom-color: @linkColor;
+    border-top-color: @linkColor;
+  }
+}
+
+.t3-mainnav .nav-collapse .nav > li > a, 
+.t3-mainnav .nav-collapse .dropdown-menu a {
+  border-color: #E7E7E7 !important;
+}
+
+
+.navbar-inner {
+  .mainnav-wrap  {
+    .dropdown-menu li > a {
+      border-bottom: 1px solid #1D1D1D;
+      padding-right: 20px;
+    }
+  }
+}
+
+.t3-mainnav.light-mainnav {
+  .dropdown-menu li > a {
+    color: @gray;
+    border-bottom: none;
+    border-top-color: #e7e7e7;
+  }
+}
+
+#fixel-top-panel {
+  background-color: #f2f2f2;
+  border-color: #e7e7e7;
+  .form-search #mod-search-searchword {
+    background-color: @white;
+    border-color: #e5e5e5;
+
+    // hover state
+    &:hover {
+      border-color: darken(@grayDarker, 10%);
+    }
+  }
+
+  .module-title {
+    color: @black;
+  }
+}
+
+.item-page ul.thumbnails li a {
+  &:hover, &:focus, &:active, &.active {
+    border-color: @linkColor;
+  }
+}
+
+.com_tags .container.t3-mainbody {
+  background: #EEEEEE;
+}
+
+.com_tags .tag-filter{
+  border-color: #ccc;
+}
+
+.com_tags .tag-filter ul.tag-list li a {
+  background-color: #ddd;
+  color: #222;
+}
+
+#fixel-top-pannel-link { 
+  background-color: #f2f2f2;
+  border-color: #E7E7E7;
+}
+
+div.tagspopular ul li a {
+    background-color: #ddd;
+    color: @grayDarker;
+    &:hover, &:focus, &:active {
+      background-color: #ddd;
+      color: @linkColor;
+    }
+}
+.t3-megamenu {
+  .active .mega-group-ct .mega-inner,
+    .mega-group-ct .mega-inner {
+      .mega-nav > li a {
+        color: @black;
+        font-size: @T3smallFontSize;
+        font-weight: 300;
+        padding: (@T3globalPadding/2) 0;
+        &:hover, &:focus, &:active {
+          color: @linkColor;
+        }
+      }
+      .mega-nav > li.active  a {
+        color: @linkColor;
+    }
+  }
+}
+
+.com_tags .fixel-grid-wrapper > h2 {
+  color: #333;
+}
+
+//
+// LIGHT MAINNAV FOR NORMAL SCREEN AND ABOVE
+// -------------------------------------------------------------
+@media  (min-width: @aboveNavbarCollapseWidth) {
+  html .t3-mainnav.light-mainnav .logo-image a {
+    background-image: url("@{T3ThemeImagePath}/logo-light.png") !important;
+  }
+}
+
+html .t3-mainnav {
+  .logo {
+    border-color: #e7e7e7;
+  }
+
+  .logo-image a, {
+    background-image: url("@{T3ThemeImagePath}/logo-light.png") !important;
+  }
+
+  .social-link ul li {
+    border-color: #e7e7e7;
+    
+    a i {
+      color: @gray;
+    }
+
+    &:hover i, &:focus i, &:active i {
+      color: @white;
+    }
+  }
+
+  .addthis_toolbox {
+    border-left-color: #E7E7E7;
+    background-color: @white;
+
+    > a {
+      border-right-color: #E7E7E7;
+    }
+
+    > a > span.at300bs  {
+      background-image: url("@{T3ThemeImagePath}/ico-social-light.png") !important;
+    }
+
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------
+.t3-footer .container {
+  background: none;
+}
+
+.t3-logo-light {
+  background-image: url("http://joomlart.s3.amazonaws.com/images/jat3v3-documents/logo-complete/t3logo-big-dark.png");
+}
+
+
+
+// ---------------------------------------------------------
+// MODULES
+// ---------------------------------------------------------
+div.tagssimilar ul li a {
+  background-color: #ddd;
+  color: @grayDark;
+  &:hover, &:focus, &:active {
+    background-color: #ddd;
+  }
+}
+
+.t3-module .nav {
+  li {
+    a:hover, a:focus,a:active {
+      background-image: url("@{T3ThemeImagePath}/folder-hover.png");
+    }
+  }
+
+  li.dropdown.open > .dropdown-toggle, 
+  li.dropdown.active > .dropdown-toggle, 
+  li.dropdown.open.active > .dropdown-toggle, 
+  > li.dropdown.open.active > a:hover {
+    background-image: url("@{T3ThemeImagePath}/folder-hover.png");
+  }
+}
+
+.t3-module ul.archive-module,
+.archive-module {
+  list-style: none;
+  margin: 0;
+  li {
+    a {
+      // Link States
+      &:hover, &:focus, &:active {
+        background-image: url("@{T3ThemeImagePath}/calendar-hover.png");
+      }
+    }
+  }
+}
+
+#fixel-top-panel .t3-module .nav.colors li {
+  a {
+    border-color: @white;
+  }
+}
+
+.t3-sidebar .t3-module {
+  border-color: @grayLighter;
+}
+
+.t3-content.has-sidebar2 {
+  background-image: url("@{T3ThemeImagePath}/line-light.gif");
+}
+
+.login-wrap {
+  border-color: @grayLighter;
+}
+
+// Slideshow
+// ---------
+.ja-ss-thumbs-wrap .ja-ss-thumbs .ja-ss-thumb.active span {
+  background-image: url("@{T3ThemeImagePath}/thumb-active-bg.png");
+}
+
+
+
+//
+// JSHOPPING
+// ------------------------------------------------------
+.productfull .prod_buttons .prod_addtocart .btn-wishlist {
+  color: @linkColor;
+}
+
+span.jshop_error {
+  color: @linkColor;
+}
+
+table.jshop_checkout {
+  border-color: @linkColor;
+}
+
+.jshop .cart .product_name a :hover {
+  color: @linkColor;
+}
+
+.downlod_order_invoice a {
+  background: @linkColor;
+}
+
+.jshop .product_label .label_name {
+  color: @linkColor;
+}
+
+.jshop_list_product .product .image .name a:hover,
+.jshop_list_product .product .image .name a:focus,
+.jshop_list_product .product .image .name a:active {
+  color: @linkColor;
+}
+
+.jshop_list_product .product .image .jshop_price {
+  color: @linkColor;
+}
+
+#jshop_summ_product {
+  color: @linkColor;
+}
+
+#jshop_module_cart a {
+  background-color: @linkColor;
+  border-color: @linkColor;
+}
+
+#jshop_module_cart a:hover,
+#jshop_module_cart a:focus,
+#jshop_module_cart a:active {
+  background-color: @linkColorHover;
+}
+
+.bestseller_products .block_item .item_name a:hover, 
+.bestseller_products .block_item .item_name a:focus, 
+.bestseller_products .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.bestseller_products .block_item  .item_price {
+  color: @linkColor;
+}
+
+.top_rating .block_item .item_name a:hover, 
+.top_rating .block_item .item_name a:focus, 
+.top_rating .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.top_rating .block_item  .item_price {
+  color: @linkColor;
+}
+
+.latest_products .block_item .item_name a:hover, 
+.latest_products .block_item .item_name a:focus, 
+.latest_products .block_item .item_name a:active {
+  color: @linkColor;
+}
+
+.latest_products .block_item  .item_price {
+  color: @linkColor;
+}
+
+.jshopping-content-right .prod_price {
+  color: @linkColor;
+}
+
+.jshopping-content-right .qty_in_stock #product_qty {
+  color: @linkColor;
+}
+
+table.jshop #checkout .td_2 a {
+  background-color: @linkColor;
+  border-color: @linkColor;
+}
+
+.register_block span.small_header {
+  border-color: @linkColor;
+}
+
+.com_jshopping.task-login .jshop {
+  background: @linkColor;
+}
+
+.downlod_order_invoice a:hover {
+  background: @linkColorHover;
+}
+
+table.jshop #checkout .td_2 a:hover {
+  background: @linkColorHover;
+  border-color: @linkColorHover;
+}
+
+#active_step {
+  background: @linkColor;
+}
+
+
+//
+// EasyBlog
+// ------------------------------------------------------
+#ezblog-menu .blog-navi .user-form form .button {
+  background-color: @linkColor !important;
+}
+
+#ezblog-menu .blog-navi .user-form form a {
+  color: @linkColor !important;
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item a:hover,
+.com_easyblog .mod_easyblogcategories .mod-item a:focus,
+.com_easyblog .mod_easyblogcategories .mod-item a:active {
+  color: @linkColor;
+}
+
+.mod_easyblogtagcloud .tag-cloud a:hover, 
+.mod_easyblogtagcloud .tag-cloud a:focus, 
+.mod_easyblogtagcloud .tag-cloud a:active {
+  color: @linkColor;
+}
+
+
+#eblog-wrapper .list-pagination li a:hover {
+  border-top-color: @linkColor;
+}
+
+#ezblog-body .blog-post .blog-title a:hover, 
+#ezblog-body .blog-post .blog-title a:focus, 
+#ezblog-body .blog-post .blog-title a:active {
+  color: @linkColor;
+}
+
+#ezblog-body ul.featured-entries .featured-title a:hover, 
+#ezblog-body ul.featured-entries .featured-title a:focus, 
+#ezblog-body ul.featured-entries .featured-title a:active {
+  color: @linkColor;
+}
+
+#ezblog-body .featured-a a span {
+  background-image: url("@{T3ThemeImagePath}/featured-bullets.png") !important;
+}
+
+
+#ezblog-body ul.featured-entries .featured-image + .featured-meta {
+  background-image: url("@{T3ThemeImagePath}/featured-arrow.png") !important;
+}
+
+.com_easyblog .mod_easyblogarchive .mod-year a i {
+  background-image: url("@{T3ThemeImagePath}/mod.toggle.png") !important;
+}
+
+//
+// MISC.
+// ------------------------------------------------------
+#infinity-next {
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.ajax-indicator {
+  background-image: url("@{T3ThemeImagePath}/ajax-load.gif");
+}
+
+//
+// Small
+// -------------------------------------------------------------
+@media  (max-width: 1208px) {
+  .t3-mainnav.light-mainnav #fixel-top-pannel-link {
+    background-color: #F2F2F2 !important;
+    border-color: #E7E7E7 !important;
+  }
+
+  .social-link {
+    background-color: #F2F2F2;
+    border-color: #E7E7E7 !important;
+    &:after {
+      color: @linkColor !important;
+    }
+
+    &:hover, &:focus, &:active {
+      &:after {
+        color: @linkColorHover !important;
+      }
+    }
+    .addthis_toolbox {
+      border-color: #E7E7E7 !important;
+    }
+  }
+
+  .t3-mainnav.light-mainnav .social-link .addthis_toolbox > a {
+    border-color: #e7e7e7 !important;
+  }
+
+  // Mainnav 
+  // --------
+  .t3-mainnav .navbar .btn-navbar {
+    background: #f2f2f2;
+    border-color: #E7E7E7;
+    color: @linkColor;
+    [class^="icon-"] , [class^=" icon-"] { color: @linkColor; }
+  }
+}
+
+
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media  (max-width: 1024px) { 
+  .t3-mainnav.light-mainnav #fixel-top-pannel-link {
+    background-color: #F2F2F2 !important;
+    border-color: #E7E7E7 !important;
+  }
+
+  .social-link {
+    background-color: #F2F2F2;
+    border-color: #E7E7E7 !important;
+    &:after {
+      color: @linkColor !important;
+    }
+
+    &:hover, &:focus, &:active {
+      &:after {
+        color: @linkColorHover !important;
+      }
+    }
+    .addthis_toolbox {
+      border-color: #E7E7E7 !important;
+    }
+    
+  }
+
+  .t3-mainnav.light-mainnav .social-link .addthis_toolbox > a {
+    border-color: #e7e7e7 !important;
+  }
+
+  // Mainnav 
+  // --------
+  .t3-mainnav .navbar .btn-navbar {
+    background: #f2f2f2 !important;
+    border-color: #E7E7E7 !important;
+    color: @linkColor;
+    [class^="icon-"] , [class^=" icon-"] { color: @linkColor; }
+  }
+}

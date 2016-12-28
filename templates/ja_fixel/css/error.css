@@ -1,0 +1,155 @@
+@import url(../fonts/novecentowide/stylesheet.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100italic,100,400italic,500,500italic,900,900italic,700italic,700);
+
+
+a {
+  color: #FC615D;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fb1812;
+  text-decoration: none;
+}
+
+body.page-error{
+  background: #111;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+div#errorboxoutline {
+  position: relative;
+  text-align: center;
+}
+
+div.error {
+  color: #666;
+  margin: 150px auto 0;
+  min-height: 500px;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 894px;
+}
+ 
+div.error h1 {
+  height: 337px;
+  line-height: 337px;
+  margin-bottom: 50px;
+  background: url(../images/error_bg.png) no-repeat center center;
+}
+
+div.error h1 span{
+  width: 298px;
+  height: 337px;
+  display: block;
+  float: left;
+  font-size: 0;
+  margin-right: 0x;
+  text-indent: -999em;
+}
+
+div.error h1 span.errorcode-0 {
+ background: url(../images/error-0.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-last {
+ margin:0px;
+}
+
+div.error h1 span.errorcode-1 {
+ background: url(../images/error-1.png) no-repeat center center;
+}
+
+
+div.error h1 span.errorcode-2 {
+ background: url(../images/error-2.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-3 {
+ background: url(../images/error-3.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-4 {
+ background: url(../images/error-4.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-5 {
+ background: url(../images/error-5.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-6 {
+ background: url(../images/error-6.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-7 {
+ background: url(../images/error-7.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-8 {
+ background: url(../images/error-8.png) no-repeat center center;
+}
+
+div.error h1 span.errorcode-9 {
+ background: url(../images/error-9.png) no-repeat center center;
+}
+
+div.error #errorboxbody {
+  color: #fff;
+  margin-top: 15px;
+}
+
+div.error #errorboxbody a {
+  color: #FC615D;
+}
+
+div.error #errorboxbody a:hover,
+div.error #errorboxbody a:focus, 
+div.error #errorboxbody a:active {
+  color: #fb1812;
+  text-decoration: underline;
+}
+
+div.error .error-message h2 {
+  color: #fff;
+  font-family: 'novecento_widedemibold';
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 34px;
+  margin: 0 0 25px;
+  padding: 0;
+}
+
+div.error-nav ul {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 15px 0 0 !important; 
+  padding: 0 !important;
+}
+
+div.error-nav ul li {
+  display: inline;
+  list-style: none;
+  line-height: 24px;
+}
+
+div.error-nav ul li:first-child {
+  border-left: 0;
+  margin-left: -10px;
+}
+
+div.error-nav ul li a {
+  padding: 0 5px;
+  color: #008dde;
+}
+
+div.error-nav ul li a:hover,
+div.error-nav ul li a:focus, 
+div.error-nav ul li a:active {
+  color: #037fa4;
+}

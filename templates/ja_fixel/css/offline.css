@@ -1,0 +1,269 @@
+/**
+ * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+ 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100italic,100,400italic,500,500italic,900,900italic,700italic,700);
+
+body { 
+  background: #111;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  height: 100%;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+div#system-message .alert {
+  color: #333;
+}
+
+dl#system-message .error {
+  color: #cc3300;
+}
+
+/* Style for Message */
+dl#system-message,
+div#system-message .alert {
+  background: #f5f5f5;
+  border-top: solid 1px #e5e5e5;
+  border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  -webkit-border-radius: 0 0 3px 3px;
+  margin-bottom: 0;
+  margin-top: 15px;
+  padding: 10px;
+}
+
+form {
+  margin: auto;
+}
+
+form br {
+  display: none;
+}
+
+form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+form p {
+  margin: 0;
+  padding: 0;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+img {
+  border: 0 none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input.button {
+  background: #fb302b;
+  border: 1px solid #fb302b;
+  box-shadow: none;
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  box-shadow: none;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+input.button:active,
+input.button:focus,
+input.button:hover {
+  *background-color: #e2241f;
+  background-color: #e2241f;
+  border-color: #e2241f !important;
+  color: #fff;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  text-shadow: none;
+}
+
+label {
+  color: #666;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* -- class styles ---------------------------------- */
+
+.outline {
+}
+
+.wrap-input {
+  overflow: hidden;
+}
+
+.wrap-offline-message {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.wrap-offline-message h1 {
+  background: url(../images/logo.png) no-repeat left top;
+  color: #fff;
+  display: block;
+  line-height: normal;
+  margin: auto;
+  padding: 0 0 0 50px;
+  text-shadow: none;
+  text-align: left;
+}
+
+.wrap-offline-message p {
+  color: #444;
+}
+
+.error-form {
+  background: #fff;
+}
+
+#form-login-password {
+  float: right;
+}
+
+#form-login-remember input.inputbox {
+  border: none;
+  border-radius: 0 !important;
+  display: inline-block;
+  margin: 0;
+  padding: 0
+  -webkit-border-radius: 0 !important;
+  vertical-align: middle;
+}
+
+#form-login-remember label {
+  border-radius: 0;
+  display: inline-block;
+  font-weight: normal;
+  margin-top: 2px;
+  vertical-align: top;
+  -webkit-border-radius: 0 !important;
+}
+
+#form-login-username {
+  float: left;
+}
+
+#form-login-username input.inputbox,
+#form-login-password input.inputbox {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: none !important;
+  color: #666666;
+  font-size: 13px;
+  height: 20px;
+  padding: 4px 6px;
+  -webkit-appearance: none !important;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  width: 210px;
+}
+
+#form-login-username input.inputbox:focus,
+#form-login-password input.inputbox:focus {
+  border: 1px solid #FC615D;
+  box-shadow: none !important;
+  outline: none;
+  -webkit-appearance: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+#form-login .description {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* -- id styles ------------------------------------- */
+
+#frame {
+  background: #111;
+  border: solid 1px #1d1d1d;
+  margin: 70px auto 0;
+  max-width: 750px;
+  padding: 20px 20px 40px;
+  width: 500px;
+  border-radius: 0px;
+  -wekbit-border-radius: 0px;
+
+}
+
+/* -- form styles ----------------------------------- */
+#frame #form-login {
+  padding: 20px;
+}
+
+#frame form {
+  text-align: left;
+}
+
+/* System message */
+#system-message dd {
+  margin: 0 0 0 10px;
+}
+
+#system-message dt {
+  font-weight: bold;
+}
+
+#system-message ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.offline-page div#system-message-container div#system-message .alert  {
+  margin-bottom: 20px;
+}
+
+.offline-page .alert .close {
+  width: 16px;
+  height: 16px;
+  float: right;
+}
+
+.offline-page div#system-message .alert h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#frame img {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+html[dir="rtl"] #frame form {
+  text-align: inherit;
+}
+
+
+html[dir="rtl"] .wrap-offline-message h1 {
+  background-position: left top;
+  padding-left: 0;
+  padding-right: 50px;
+  text-align: right;
+}
+
+div#system-message .alert .close{
+  float: left;
+  margin-right: 10px;
+}
+
+div#system-message .alert h4 {
+  margin: 0 ;
+}

@@ -1,0 +1,89 @@
+
+
+body {
+  background: #fff;
+  padding-top: 0;
+}
+.t3-mainbody {
+  margin-top: 0;
+}
+.item-page .item-image {
+  max-width: 100%;
+}
+.item-page .item-image img {
+  width: 100%;
+}
+.component .view-article .item-page {
+  background: #fff;
+}
+.t3-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.view-article .list-icons {
+  background: none;
+  left: auto;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+}
+.view-article .list-icons .addthis_toolbox {
+  display: none;
+}
+.view-article .list-icons .menu-edit ul li a {
+  background: none;
+  color: #02BD85;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+}
+.view-article .list-icons .menu-edit ul li a:hover,
+.view-article .list-icons .menu-edit ul li a:focus,
+.view-article .list-icons .menu-edit ul li a:active {
+  background: none;
+  color: #017150;
+}
+.view-article .fb-comments {
+  display: none;
+}
+.component.view-article .item-page {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.component.view-article.layout-default article img[align="left"],
+.component.view-article.layout-default .img_caption.left,
+.component.view-article.layout-default .pull-left.item-image {
+  margin: 0 20px 20px 0 !important;
+}
+.component.view-article.layout-default article img[align="right"],
+.component.view-article.layout-default .img_caption.right,
+.component.view-article.layout-default .pull-right.item-image {
+  margin: 0 0 20px 20px !important;
+}
+.component.com_jshopping.task-view .t3-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.component.view-article .list-icons .menu-edit {
+  display: block;
+}
+.component.view-article .list-icons .menu-edit ul li a {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  text-indent: -999em;
+  color: #666;
+  text-decoration: none;
+}
+.component.view-article .list-icons .menu-edit ul li a i {
+  font-size: 14px;
+  font-weight: normal;
+}
+.component.view-article .list-icons .menu-edit ul li a:hover,
+.component.view-article .list-icons .menu-edit ul li a:focus,
+.component.view-article .list-icons .menu-edit ul li a:active {
+  color: #02BD85;
+}
+

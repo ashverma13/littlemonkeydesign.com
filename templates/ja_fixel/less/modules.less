@@ -1,0 +1,953 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+
+//--------------------------------------------------
+// GENECRIC MODULE STYLE
+// --------------------------------------------------
+.t3-module {
+  background: @T3moduleBackground;
+  color: @T3moduleColor;
+  margin-bottom: @T3globalMargin;
+  padding: 0;
+  // Module padding
+  .module-inner {
+    padding: @T3modulePadding;
+  }
+}
+
+
+// Module Title
+// ------------
+.module-title {
+  background: @T3moduleTitleBackground;
+  color: @T3moduleTitleColor;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0  0 @T3globalMargin;
+  padding: @T3moduleTitlePadding;
+}
+
+
+// Module Content
+// --------------
+.module-ct {
+  background: @T3moduleContentBackground;
+  color: @T3moduleContentColor;
+  padding: @T3moduleContentPadding;
+  .clearfix();
+}
+
+
+// Module List
+// -----------
+.t3-module {
+  ul,
+  ol {
+    margin-left: 20px;
+  }
+  
+  ul.unstyled,
+  ol.unstyled,
+  ul.nav,
+  ol.nav {
+    margin-left: 0;
+  }
+}
+
+//
+// SIDEBAR MODULES
+// --------------------------------------------------
+.t3-sidebar .t3-module {
+  border-bottom: 2px solid @black;   
+  margin-left: -@T3globalPadding; 
+  margin-bottom: 0;
+  padding: (@T3globalPadding * 2);
+}
+
+
+//
+// JOOMLA! MODULES
+// --------------------------------------------------
+
+
+// Menu
+// ----
+.module_menu,
+.t3-module {
+  .nav {
+    list-style: none;
+    margin: 0;
+    li {
+      a {
+        background: url("@{T3ImagePath}/folder.png") no-repeat left center;
+        color: @gray;
+        font-weight: 400;
+        padding: 6px 0 6px @T3globalPadding;
+        // Link States
+        &:hover, &:focus, &:active {
+          background-image: url("@{T3ImagePath}/folder-hover.png");
+          color: @linkColor;
+          text-decoration: none;
+        }
+      }
+
+      //Dropdown Menu
+      .dropdown-menu {
+        .border-radius(0);
+        li {
+          a {
+            background: none !important;
+            border-bottom: solid 1px @T3borderColor;
+            font-size: @T3smallerFontSize;
+            font-weight: 400;
+            padding: 6px @T3globalPadding;
+          }
+
+        }
+
+        .active > a, 
+        .active > a:hover {
+          color: @linkColor;
+        }
+      }
+    }
+
+    > li:first-child > a {
+      padding-top: 0;
+      border-top: 0;
+      background-position: left 2px;
+    }
+
+    li.dropdown.open > .dropdown-toggle, 
+    li.dropdown.active > .dropdown-toggle, 
+    li.dropdown.open.active > .dropdown-toggle, 
+    > li.dropdown.open.active > a:hover {
+      background: url("@{T3ImagePath}/folder-hover.png") no-repeat left center transparent;
+      color: @linkColor;
+    }
+
+    li.dropdown.open > .dropdown-toggle .caret, 
+    li.dropdown.active > .dropdown-toggle .caret, 
+    li.dropdown.open.active > .dropdown-toggle .caret {
+      border-bottom-color: @linkColor;
+      border-top-color: @linkColor;
+    }
+  }
+
+  // No top border
+  .nav > li:first-child {
+    border-top: 0;
+  }
+  
+  .nav > li:first-child > a {
+    padding-top: 0;
+    border-top: 0;
+  }
+  
+  // Hover state
+  .nav > li > a:hover {
+  }
+  
+  // Active state
+  .nav > li.active > a {
+  }
+}
+
+// Colors Menu
+// ----------
+#fixel-top-panel .t3-module .nav.colors li {
+  display: inline-block;
+
+  a {
+    width: 38px;
+    height: 38px;
+    overflow: hidden;
+    margin: 1px;
+    border: 2px solid @grayDarker;
+    padding: 0;
+    text-indent: -999em;
+    background: no-repeat center center #333;
+    border: 1px solid #141414;
+    padding: 1px;
+    .opacity(40);
+  }
+
+  a.default-color {
+    background-image: url("@{T3ImagePath}/default.png");
+  }
+
+  a.light-green-color {
+    background-image: url("@{T3ImagePath}/light-green.png");
+  }
+
+  a.light-color {
+    background-image: url("@{T3ImagePath}/light.png");
+  }
+
+  a.light-blue-color {
+    background-image: url("@{T3ImagePath}/light-blue.png");
+  }
+
+  a.dark-blue-color {
+    background-image: url("@{T3ImagePath}/dark-blue.png");
+  }
+
+  a.dark-green-color {
+    background-image: url("@{T3ImagePath}/dark-green.png");
+  }
+
+  a.dark-orange-color {
+    background-image: url("@{T3ImagePath}/dark-orange.png");
+  }
+
+  a.light-orange-color {
+    background-image: url("@{T3ImagePath}/light-orange.png");
+  }
+
+  &.active a,
+  a:hover, a:focus, a:active {
+    .opacity(100);
+  }
+}
+
+
+.light-mainnav #fixel-top-panel .t3-module .nav.colors li {
+  a {
+    background-color: @grayLight;
+    border-color: @white;
+  }
+}
+
+// Login Form
+// ----------
+#login-form {
+  margin-bottom: 0;
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+  }
+  
+  .btn-primary {
+  }
+  
+  ul.unstyled {
+    margin-bottom: 0;
+  }
+
+  #form-login-username {
+  }
+  
+  #form-login-password {
+  }
+
+  #form-login-secretkey {
+    input.input-small {
+      width: 64%;
+    }
+    
+    span.btn.hasTooltip {
+      padding: 4px 10px;
+    }
+  }
+  
+  #form-login-remember {
+  }
+
+}
+
+
+// Search
+// ------
+#fixel-top-panel .form-search {
+  .search label {
+    display: none;
+  }
+
+  #mod-search-searchword {
+    width: 150px;
+    padding: 6px 15px;
+    background-color: @black;
+    border-color: @grayDarker;
+    .transition(all 0.6s linear 0s);
+
+    // hover state
+    &:hover {
+      border-color: lighten(@grayDarker, 10%);
+    }
+  }
+}
+
+.light-mainnav {
+  #fixel-top-panel {
+    #mod-search-searchword {
+      background-color: @white;
+      border-color: #e5e5e5;
+
+      // hover state
+      &:hover {
+        border-color: darken(@grayDarker, 10%);
+      }
+    }
+  }
+}
+
+// Advertisement
+// -------------
+.bannergroup {
+  &.grid-1x1,
+  &.grid-1x2,
+  &.grid-2x1,
+  &.grid-2x2 {
+    width: 100% !important;
+  }
+}
+
+.banneritem {
+  a {
+    font-weight: bold;
+  }
+}
+
+.bannerfooter {
+  border-top: 1px solid #1d1d1d;
+  font-size: @T3smallerFontSize;
+  padding-top: @T3globalPadding / 2;
+  text-align: right;
+}
+
+
+// Categories
+// ----------
+.categories-module, ul.categories-module,
+.category-module, ul.category-module {
+  margin: 0;
+  
+  li {
+    list-style: none;
+    padding: (@baseLineHeight / 2) 0;
+    // Remove border for first item
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+  
+  h4 {
+    font-size: @baseFontSize;
+    font-weight: normal;
+    margin: 0;
+
+    a {
+      color: @gray;
+
+      // Link State
+      &:hover, &:focus, &:active {
+        color: @linkColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// Archived Articles
+// -----------------
+.t3-module ul.archive-module,
+.archive-module {
+  list-style: none;
+  margin: 0;
+  li {
+    a {
+      background: url("@{T3ImagePath}/calendar.png") no-repeat left center;
+      color: @gray;
+      font-weight: 400;
+      padding: 6px 0 6px @T3globalPadding;
+      // Link States
+      &:hover, &:focus, &:active {
+        background-image: url("@{T3ImagePath}/calendar-hover.png");
+        color: @linkColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// News Feed
+// ----------
+.feed {
+  // Feed Title
+  h4 {
+    font-weight: bold;
+  }
+  // Feed list
+  .newsfeed,
+  ul.newsfeed {
+    border-top: 1px solid @hrBorder;
+    li {}
+    .feed-link, 
+    h5.feed-link {
+      font-size: @baseFontSize;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+}
+
+
+// Latest Users 
+// ------------
+.latestusers,
+ul.latestusers {
+  margin-left: 0;
+  li {
+    background: @grayLighter;
+    display: inline-block;
+    padding: 5px 10px;
+    .border-radius (@baseBorderRadius);
+  }
+}
+
+
+// Stats 
+// ------
+.stats-module {
+  dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+    width: 35%;
+  }
+  dd {
+    width: 60%;
+  }
+}
+
+// Popular Tags
+div.tagspopular ul {
+  display: block;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+  li {
+    color: @white;
+    display: inline-block;
+    margin: 0 3px 0 0;
+    a {
+      background: @grayDarker;
+      color: @grayLight;
+      display: block;
+      line-height: normal;
+      margin-bottom: 2px;
+      padding: 3px 5px;
+      .border-radius(0);
+      &:hover, &:focus, &:active {
+        background: @grayDarker;
+        color: @linkColor;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.light-mainnav {
+  div.tagspopular ul li a {
+    background-color: #ddd;
+    color: @grayDarker;
+    &:hover, &:focus, &:active {
+      background-color: #ddd;
+      color: @linkColor;
+    }
+  }
+}
+
+// Similar tags
+div.tagssimilar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+div.tagssimilar ul li {
+  padding: 8px 0;
+  display: inline;
+}
+
+div.tagssimilar ul li a {
+  background: @grayDarker;
+  color: @grayLight;
+  display: inline-block;
+  line-height: normal;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  padding: 3px 5px;
+  .border-radius(0);
+}
+
+div.tagssimilar ul li a:hover,
+div.tagssimilar ul li a:focus,
+div.tagssimilar ul li a:active {
+  background: @grayDarker;
+  color: @linkColor;
+  text-decoration: none;
+}
+
+.light-mainnav div.tagssimilar ul li a {
+  background-color: #ddd;
+  color: @grayDark;
+  &:hover, &:focus, &:active {
+    background-color: #ddd;;
+    color: @linkColor;
+  }
+}
+
+// Social Link
+.social-link {
+
+  .custom {
+    min-width: 248px;
+    display: block;
+  }
+  
+  background-color: #111;
+  .transition(~"background-color 0.6s ease-out, border-color 0.6s ease-out");
+
+  .addthis_toolbox {
+    background-color: #111;
+    height: 60px !important;
+    border-left: solid 1px #1D1D1D;
+    .transition(~"background-color 0.6s ease-out, border-color 0.6s ease-out");
+
+    > a {
+      border-right: solid 1px #1D1D1D;
+      margin: 0 !important; 
+      padding: 0 !important;
+      .transition(border-color 0.6s ease-out);
+    }
+
+    > a > span.at300bs  {
+      background-image: url("@{T3ImagePath}/ico-social.png") !important;
+      height: 60px !important;
+      line-height: 60px !important;
+      width: 60px !important;
+
+      &.at15t_facebook {
+        background-position: 0px 0px !important;
+
+        &:hover {
+          background-position: -60px 0px !important;
+          background-color: #0066b9 !important;
+        }
+      }
+
+      &.at15t_twitter{
+        background-position: 0px -60px !important;
+        &:hover {
+          background-position: -60px -60px !important;
+          background-color: #0093c3 !important;
+        }
+      }
+
+      &.at15t_youtube{
+        background-position: 0px -180px !important;
+        &:hover {
+          background-position: -60px -180px !important;
+          background-color: #7b4939 !important;
+        }
+      }
+
+      &.at15t_instagram {
+        background-position: 0px -120px !important;
+        &:hover {
+          background-position: -60px -120px !important;
+          background-color: #7b4939 !important;
+        }
+      }
+    }
+  }
+
+}
+
+// Languages
+.mod-languages {
+  ul.lang-inline {
+    margin: @T3globalMargin/2 0 !important;
+    li {
+      margin: 0 5px 0 0 !important;
+    }
+  }
+}
+
+// Twitter
+// -------
+div.ja-twitter div.ja-twitter-item {
+  padding: 0 0 @T3globalPadding !important;
+}
+
+div.ja-twitter div.ja-twitter-item  + div.ja-twitter-item {
+  padding-top: @T3globalPadding !important;
+}
+
+
+// Highlight
+//--------- 
+.items.highlight {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.t3-module.highlight,
+.module.hightlight {
+  background: @T3primaryColor;
+  color: @white;
+  font-weight: 300;
+  .module-title  {
+    color: @white;
+  }
+  .highlight  {
+    background: @T3primaryColor;
+    font-weight: 300;
+  }
+}
+
+.fixel-grid .items.highlight,
+.highlight {
+  article {
+    cursor: auto;
+    background: @T3primaryColor;
+    color: @white;
+    font-weight: normal;
+    h1, h2, h3, h4, h5, h6 {
+      color: @white;
+    }
+    a {
+      color: @white;
+      // Link States 
+      &:hover, &:focus, &:active {
+        color: @white;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .module-ct {
+    .box-sizing(border-box);
+    .grid-2x2.highlight,
+    .grid-2x1.highlight,
+    .grid-1x2.highlight,
+    .grid-1x1.highlight {
+      width: 100% !important;
+    }
+  }
+}
+
+// Yellow
+//--------- 
+.t3-module.yellow,
+.module.yellow {
+  background: #f7e430;
+  color: @white;
+  .module-title  {
+    color: @white;
+  }
+  a {
+    color: @grayDark;
+    &:hover, &:active, &:focus {
+      color: @grayDark;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Blue
+//--------- 
+.t3-module.blue,
+.module.blue {
+  background: #34609D;
+  color: @white;
+  .module-title  {
+    color: @white;
+  }
+  a {
+    color: @grayDark;
+    &:hover, &:active, &:focus {
+      color: @grayDark;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Red
+//--------- 
+.t3-module.red,
+.module.red {
+  background: #ec3216;
+  color: @white;
+  .module-title  {
+    color: @white;
+  }
+  .red {
+    color: @white;
+    font-weight: 300;
+  }
+  a {
+    color: @grayDark;
+    &:hover, &:active, &:focus {
+      color: @grayDark;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+// Cyan
+//--------- 
+.t3-module.cyan,
+.module.cyan {
+  background: #26c8a1;
+  color: @white;
+  .module-title  {
+    color: @white;
+  }
+}
+
+
+// Orange
+//--------- 
+.t3-module.orange,
+.module.orange {
+  background: #ef812a;
+  color: @white;
+  .module-title  {
+    color: @white;
+  }
+}
+
+
+// Grid Normal
+//------------
+.t3-module.grid-normal,
+.module.grid-normal {
+  min-height: 218px;
+}
+
+// Grid large
+//------------
+.t3-module.grid-normal,
+.module.grid-normal {
+  min-height: 218px;
+}
+
+// Big padding
+// --------------
+.t3-module.big-padding,
+.module.big-padding {
+  .module-ct {
+    padding: (@T3globalPadding*4);
+  }
+}
+
+// No Padding
+// --------------
+.t3-module.no-padding,
+.module.no-padding,
+.t3-sidebar .t3-module.no-padding {
+  padding: 0;
+  .module-ct {
+    padding: 0;
+  }
+}
+
+
+// Twitter
+//-------
+.t3-module.mod-twitter {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.t3-module.mod-twitter .module-inner {
+  background: url(../images/twitter-icon.png) no-repeat center 70px #0093c3;
+  color: @white;
+  height: 300px;
+  padding: 220px (@T3globalPadding * 2) (@T3globalPadding * 2);
+  text-align: center;
+  width: 300px;
+  .box-sizing(border-box);
+}
+
+// My Cart
+// -------
+#mycart {
+  position: absolute;
+  top: 100px;
+  right: 0;
+
+  .dropdown-toggle {
+    background-color: @T3primaryColor;
+    color: @white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+    font-size: 16px;
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
+
+  &.open .dropdown-toggle {
+    background-color: @T3secondaryColor;
+  }
+
+  .dropdown-menu {
+    background: @white;
+    border: 0;
+    left: auto;
+    right: -240px;
+    top: auto;
+    display: block;
+    float: none;
+    width: 240px;
+    position: absolute;
+    .transition(right 300ms ease 0s);
+    .box-shadow(0 0 1px rgba(0,0,0,.3));
+  }
+
+  &.open .dropdown-menu {
+    right: 0;
+  }
+}
+
+
+// Masshead
+// --------------
+.jamasshead {
+  &.grid-2x2,
+  &.grid-2x1,
+  &.grid-1x1,
+  &.grid-1x2 {
+    max-height: auto !important;
+    width: 100% !important;
+  }
+
+  .jamasshead-title {
+    font-family: @TPLNWDemiBold;
+    font-size: 150px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-indent: -13px;
+    word-spacing:-30px;
+  }
+
+  .jamasshead-description {
+    font-size: @T3bigFontSize;
+    font-weight: 300;
+    h3 {
+      font-family: @TPLNWDemiBold;
+      font-size: 30px;
+      font-weight: normal;  
+      line-height: 1.3;
+      margin: 0 0 @T3globalPadding;
+      width: 80%;
+    }   
+  }
+}
+
+/* Modules ---*/
+.com_easyblog .mod_easyblogarchive {
+  .mod-year a i {
+    background: url(../images/mod.toggle.png) repeat center top;
+    height: 15px;
+    top: 0;
+    width: 15px;
+  }
+
+  .mod-year a {
+    color: #333;
+    padding-left: 25px;
+  }
+}
+
+
+.mod_easyblogarchive .mod-months {
+  .mod-month {
+    background: url(../images/calendar.png) no-repeat left center;
+    font-weight: 400;
+    a {
+      color: #666;
+      &:hover, &:focus, &:active {
+        color: @linkColor;
+      }
+    }
+  }
+}
+
+
+.mod_easyblogtagcloud {
+  .tag-cloud {
+    background: url(../images/tag.png) no-repeat left center;
+    font-weight: 400;    
+    padding: 3px 0 3px 24px;
+    a {
+      color: @gray;
+    }
+    &:hover, &:focus, &:active {
+      color: @linkColor;
+      text-decoration: none;
+    }
+  }
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item,
+.ezb-mod .mod-item {
+  border: none !important;
+  margin: 0 !important;
+  padding-top: 0 !important; 
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item + .mod-item,
+.ezb-mod .mod-item + .mod-item {
+  border-top: none !important;
+  margin: 0 !important;
+  padding-top: 0 !important; 
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item .mod-category-name a {
+  background: url(../images/folder.png) no-repeat left center;
+  font-weight: 400;
+  padding: 3px 0 3px 24px;
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item a {
+  color: #666;
+  font-weight: normal;
+}
+
+.com_easyblog .mod_easyblogcategories .mod-item a:hover,
+.com_easyblog .mod_easyblogcategories .mod-item a:focus,
+.com_easyblog .mod_easyblogcategories .mod-item a:active {
+  color: #fc615d;
+  text-decoration: none;
+}
+
+.com_easyblog .mod_easyblogcategories .avatar {
+  width: 60px;
+}
+
+.latest-comments .mod-comment-head {
+  border-top: 0;
+  padding-top: 0;
+}

@@ -1,0 +1,242 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+.ja-ss-slideshow {
+	position: relative;
+	height: 309px;
+}
+
+.ja-ss-loading:before {
+	content: "";
+	display: block;
+	background: url("@{T3ImagePath}/slideshow/slideloading.gif") transparent no-repeat center center;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+  width: 100%;
+	z-index: 5;
+}
+ 
+.ja-ss-wrap {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.ja-ss-items {
+	width: 100%;
+  position: relative;
+  z-index:1;
+}
+
+.ja-ss-item {
+	display: block;
+	float: left;
+  left: 0;
+	margin: 0;
+  min-height: 260px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+	backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+  &.prev,
+  &.next {
+    display: block;
+  }
+
+  &.curr {
+    z-index: 2; /* IE7,8 */
+  }
+  img {
+    background: #111;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+// Desc Item
+.ja-ss-desc {	
+	background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.8);/* Modern browser */
+  background: ~"@{black}\9";/* IE 8 browser */
+  bottom: 40px;
+  color: @white;
+	font-size: @baseFontSize;
+	line-height: 18px;
+  left: 0px;
+  position: absolute;
+  padding: (@T3globalPadding*1.5) (@T3globalPadding*1.5) (@T3globalPadding*1.5) (@T3globalPadding*2) ;
+	text-align: left;
+  width: 66.5%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+  .border-radius(0px);
+
+  h3 {
+    color: @white;
+    line-height: 1;
+    font-size: 24px;
+    font-family: @TPLNWDemiBold;
+    margin: 0 0 @T3globalMargin/2 ;
+
+    a {
+      color: @white;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+
+  p {
+    font-size: @T3smallFontSize;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+// Button 
+.ja-ss-btns {
+	position: absolute;
+	top: @baseLineHeight*2;
+	right: @baseLineHeight*2;
+  z-index: 10;
+  span {
+    background: url("@{T3ImagePath}/slideshow/ctrl-btns.png") no-repeat top left;
+    color: @white;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 40px;
+    text-indent: -999em;
+  }
+  .ja-ss-prev {
+    background-position: 0 0;
+    // Hover States
+    &:hover {
+      background-position: left bottom;
+    }
+  }
+
+  .ja-ss-next {
+    background-position: -40px 0;
+    // Hover States
+    &:hover {
+      background-position: -40px bottom;
+    }
+  }
+
+  .ja-ss-stop {
+    background-position: -80px 0;
+    // Hover States
+    &:hover {
+      background-position: -80px bottom;
+    }
+  }
+
+  .ja-ss-play {
+    background-position: -120px bottom;
+    // Hover States
+    &:hover {
+      background-position: -120px bottom;
+    }
+  }
+
+  .ja-ss-playback {
+    background-position: right 0;
+    // Hover States
+    &:hover {
+      background-position: right bottom;
+    }
+  }
+}
+
+// Thumnail Images
+.ja-ss-thumbs-wrap {
+  bottom: 53px;
+  position: absolute;
+  right: 135px !important;
+  left: auto !important;
+	z-index: 2;
+  .ja-ss-thumbs {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+    white-space: nowrap;
+    .ja-ss-thumb {
+      display: inline-block;
+      cursor: pointer;
+      line-height: 1;
+      margin: 0 0 0 5px;
+      position: relative;
+      span {
+        background: url("@{T3ImagePath}/slideshow/thumb-bg.png") no-repeat center center;
+        display: block;
+        height: 15px;
+        width: 15px;
+      }
+
+      img {
+        background: @white;
+        display: block;
+        left: -15px;
+        max-width: none !important;
+        opacity: 0;
+        padding: 5px;
+        position: absolute;
+        top: -75px;     
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        .transition(opacity 0.5s);
+      }
+      // Hover States 
+      &:hover {
+        span:before {
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid @white;
+          content: "";
+          height: 0;  
+          margin-left: 3px;     
+          position: absolute;   
+          top: -5px;
+          width: 0; 
+        }
+
+        img {
+          opacity: 1;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        }
+      }
+      // Active States
+      &.active span {
+        background-image: url("@{T3ImagePath}/slideshow/thumb-active-bg.png");
+      } 
+    }
+  }
+}
+
+
+
+//Fix the slideshow is fullscreen
+#fixel-grid .ja-ss-wrap.fade {
+  opacity: 0;
+}
+
+#fixel-grid.ready .ja-ss-wrap.fade {
+  opacity: 1;
+}

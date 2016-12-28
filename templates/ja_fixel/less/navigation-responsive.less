@@ -1,0 +1,456 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+//
+// LIGHT MAINNAV FOR NORMAL SCREEN AND ABOVE
+// -------------------------------------------------------------
+@media  (min-width: @aboveNavbarCollapseWidth) {
+  .t3-mainnav {
+
+    &.affix {
+      position: fixed;
+      top: (-1 - @navbarHeight);
+    }
+
+    &.light-mainnav {
+      background: @white;
+      border-bottom: 1px solid #E7E7E7;
+      
+      .translate(0, 100%);
+
+      &:hover, &:focus, &:active {
+        .opacity(100);
+      }
+
+      .container {
+        background: @white;
+      }
+      .navbar .nav > .active > a, 
+      .navbar .nav > .active > a:hover, 
+      .navbar .nav > .active > a:focus {
+        color: @linkColor;
+        background: @white;
+      }
+
+      .nav li.dropdown.open > .dropdown-toggle .caret,
+      .nav li.dropdown.active > .dropdown-toggle .caret,
+      .nav li.dropdown.open.active > .dropdown-toggle .caret {
+        border-bottom-color: @linkColor;
+        border-top-color: @linkColor;
+      }
+      
+    
+      // Open State
+      // ----------
+      .nav li.dropdown.open > .dropdown-toggle {
+        background: @white;
+        color: @linkColor;
+        .opacity(100);
+        &:hover, &:focus, &:active {
+          background: @white;
+        }
+      }
+
+
+      // Active Open
+      .nav li.dropdown.active > .dropdown-toggle,
+      .nav li.dropdown.open.active > .dropdown-toggle {
+        background: @white;
+      }
+      // Links
+      // -----
+      .navbar .nav > li {
+        margin: 0 (@T3globalMargin*0.75);
+      }
+
+      .navbar .nav > li > a {
+        background: @white;
+        color: @gray;
+        .opacity(100);
+        //Afer 
+        &:after {
+          background: @linkColor;
+          .opacity(100);
+        }
+        //Link States
+        &:hover, &:focus, &:active {
+          color: @linkColor;
+          background: @white;
+          .opacity(100);
+          &:after {
+          background: @linkColor;
+          .opacity(100);
+          }
+        }
+      }
+
+      .dropdown-menu {
+        background: @white;
+        border-color: #e7e7e7;
+      }
+
+      .t3-megamenu .mega-nav .mega-group > .mega-group-title, 
+      .t3-megamenu .dropdown-menu .mega-nav .mega-group > .mega-group-title, 
+      .t3-megamenu .dropdown-menu .active .mega-nav .mega-group > .mega-group-title {
+        color: @gray;
+        border-color: #e7e7e7;
+      }
+
+      .t3-megamenu .mega-nav > li a, 
+      .t3-megamenu .dropdown-menu .mega-nav > li a {
+        border-color: #e7e7e7;
+        color: @black;
+        &:hover, &:focus, &:active {
+          color: @linkColor;
+        }
+      }
+
+      .t3-megamenu .mega-nav > li.active > a, 
+      .t3-megamenu .dropdown-menu .mega-nav > li.active > a {
+        color: @linkColor;
+        &:hover, &:focus, &:active {
+          color: @linkColor;
+        }
+      }
+    }
+  }
+}
+
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media  (max-width: 1024px) {
+}
+
+
+// TABLET
+// -------------------------------------------------------------
+@media  (max-width: @navbarCollapseWidth) {
+  .t3-mainnav {
+    .navbar-inner {
+      padding: 0;
+    }
+    
+    &.light-mainnav {
+      
+      .container {
+        background: @bodyBackground;
+      }
+
+      .social-link {
+        border-color: #1d1d1d;
+        .addthis_toolbox {
+          background: @bodyBackground;
+          border-color: #1d1d1d;
+        }
+
+        .addthis_toolbox > a {
+          border-color: #1d1d1d;
+        }
+      }
+
+      #fixel-top-panel {
+        background: @black;
+        border-color: #1d1d1d;
+        .container {
+          background: @black;
+        }
+        .module-title {
+          color: @white;
+        }
+        .t3-module .nav.colors li a {
+          border-color: @grayDark;
+        }
+      }
+
+      #fixel-top-pannel-link {
+        background: @black;
+        border-color: #1d1d1d;
+        .container {
+          background: @bodyBackground;
+
+        }
+      }
+    }
+
+    // COLLAPSIBLE NAVBAR
+    // ----------------------------------------------------
+
+    // The nav
+    .nav-collapse {
+      margin-top: (@T3globalMargin / 2);
+      background: @bodyBackground;
+      //#gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
+    }
+
+    .nav-collapse .nav {
+      margin: 0;
+    }
+
+    .nav-collapse .nav > li {
+    }
+
+    .nav-collapse .nav > li > a {
+      margin-bottom: 0;
+    }
+
+
+    // Nav and dropdown links in navbar
+    // -------------------------------
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a {
+      border-bottom: 1px solid #1d1d1d;
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+      font-weight: bold;
+      //color: @navbarLinkColor;
+      text-shadow: none;
+      .border-radius(0);
+      &:hover, &:focus, &:active {
+        border-color: #1d1d1d;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    .nav-collapse .dropdown-menu li + li a {
+      margin-bottom: 0;
+    }
+
+    // Hover state
+    .nav-collapse .nav > li > a:hover {
+      background: none;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // dropdown links
+    // --------------
+    .nav-collapse .dropdown-menu a {
+      border-top: 1px solid darken(@navbarBackground, 5%);
+      border-bottom: 0;
+      font-weight: normal;
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+    }
+
+
+    // Hover state
+    .nav-collapse .dropdown-menu a:hover {
+      background: none;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // Dropdowns in the navbar
+    // -----------------------
+    .nav-collapse .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      background-color: @navbarBackground;
+      border: none;
+      .border-radius(0);
+      .box-shadow(none);
+    }
+    
+    .navbar .nav > .active > a:after, 
+    .navbar .nav > .active > a:hover:after, 
+    .navbar .nav > .active > a:focus:after {
+      display: none;
+      background: none;
+    }
+
+    .nav-tabs .open .dropdown-toggle,
+    .nav-pills .open .dropdown-toggle,
+    .nav > li.dropdown.open.active > a:hover,
+    .nav > li.dropdown.open.active > a:focus {
+      border-color: #1d1d1d;
+    }
+    
+    // Full width when fixed
+    // ---------------------
+    &.navbar-collapse-fixed-top,
+    &.navbar-collapse-fixed-bottom {
+      margin: 0;
+
+      .nav-collapse {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+// ---------------------------------------------------------
+// RESPONSIVE NAVIFATION FOR MOBILE
+// ---------------------------------------------------------
+@media (max-width: 767px) {
+
+
+  // -------------------------------------------------------
+  // NAVIGATIONS ELEMENTS
+  // -------------------------------------------------------
+
+  // BREADCRUMBS
+  // -------------------------------------------------------
+  .t3-navhelper {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+
+
+  // -------------------------------------------------------
+  //  JA MAIN MENU
+  // -------------------------------------------------------
+
+  .t3-mainnav {
+    background: @navbarBackground;
+    border-top: 1px solid darken(@navbarBackground, 5%);
+    height: auto;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    // Toggle Button
+    //.navbar .btn-navbar {
+      //margin-bottom: (@T3globalMargin / 2);
+    //}
+
+    .navbar .btn-navbar {
+      margin-left: 0;
+    }
+    .navbar .btn-navbar:hover {
+      cursor: pointer;
+    }
+
+
+    // COLLAPSIBLE NAVBAR
+    // ----------------------------------------------------
+
+    // The nav
+    .nav-collapse {
+      margin-top: (@T3globalMargin / 2);
+      background: @bodyBackground;
+      //#gradient > .vertical(@navbarBackground, @navbarBackgroundHighlight);
+    }
+
+    .nav-collapse .nav {
+      margin: 0;
+    }
+
+    .nav-collapse .nav > li {
+    }
+
+    .nav-collapse .nav > li > a {
+      margin-bottom: 0;
+    }
+
+
+    // Nav and dropdown links in navbar
+    // -------------------------------
+    .nav-collapse .nav > li > a,
+    .nav-collapse .dropdown-menu a {
+      border-bottom: 1px solid #1d1d1d;
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+      font-weight: bold;
+      //color: @navbarLinkColor;
+      text-shadow: none;
+      .border-radius(0);
+      &:hover, &:focus, &:active {
+        border-color: #1d1d1d;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    .nav-collapse .dropdown-menu li + li a {
+      margin-bottom: 0;
+    }
+
+    // Hover state
+    .nav-collapse .nav > li > a:hover {
+      background: none;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // dropdown links
+    // --------------
+    .nav-collapse .dropdown-menu a {
+      border-top: 1px solid darken(@navbarBackground, 5%);
+      border-bottom: 0;
+      font-weight: normal;
+      padding: (@T3globalPadding / 2) @T3globalPadding;
+    }
+
+
+    // Hover state
+    .nav-collapse .dropdown-menu a:hover {
+      background: none;
+      background-image: none;
+      .reset-filter();
+    }
+
+
+    // Dropdowns in the navbar
+    // -----------------------
+    .nav-collapse .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      background-color: @navbarBackground;
+      border: none;
+      .border-radius(0);
+      .box-shadow(none);
+    }
+    
+    .navbar .nav > .active > a:after, 
+    .navbar .nav > .active > a:hover:after, 
+    .navbar .nav > .active > a:focus:after {
+      display: none;
+      background: none;
+    }
+
+    .nav-tabs .open .dropdown-toggle,
+    .nav-pills .open .dropdown-toggle,
+    .nav > li.dropdown.open.active > a:hover,
+    .nav > li.dropdown.open.active > a:focus {
+      border-color: #1d1d1d;
+    }
+    
+    // Full width when fixed
+    // ---------------------
+    &.navbar-collapse-fixed-top,
+    &.navbar-collapse-fixed-bottom {
+      margin: 0;
+
+      .nav-collapse {
+        margin: 0;
+      }
+    }
+    // End
+  }
+
+
+  
+  // ----------------------------------------------------
+  // MISC
+  // ----------------------------------------------------
+  .t3-mainnav .navbar .nav > li > .dropdown-menu {
+    // Hiding Menu and Divider in nav-collapse
+    &:before, &:after, .divider {
+      display: none;
+    }
+  }
+
+  .t3-mainnav .customization {
+    display: none;
+  }
+
+  // End Responsive
+}

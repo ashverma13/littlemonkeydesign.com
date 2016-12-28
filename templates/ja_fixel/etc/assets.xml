@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+	<scripts>
+		<file>js/masonry.noconflict.js</file>
+		<file>js/masonry.pkgd.js</file>
+		<file>js/imagesloaded.pkgd.js</file>
+		<file>js/jquery.mousewheel.js</file>
+		<file>js/jquery.infinitescroll.js</file>
+		<file>js/iscroll.js</file>
+		<file>js/script.js</file>
+	</scripts>
+	
+	<stylesheets>
+		<file>http://fonts.googleapis.com/css?family=Roboto:400</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:100</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:100italicc</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:300</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:300italic</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:400italic</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:500</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:700</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:500italic</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:700italic</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:900</file>
+		<file>http://fonts.googleapis.com/css?family=Roboto:900italic</file>
+		<file>fonts/novecentowide/stylesheet.css</file>
+	</stylesheets>
+	
+</assets>

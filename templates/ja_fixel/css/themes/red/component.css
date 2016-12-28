@@ -1,0 +1,47 @@
+
+
+body {
+  background: #fff;
+  padding-top: 0;
+}
+.t3-mainbody {
+  margin-top: 0;
+}
+.item-page .item-image img {
+  width: 100%;
+}
+.component .view-article .item-page {
+  background: #fff;
+}
+.t3-content {
+  padding-top: 20px;
+  padding-bottom: ;
+}
+.view-article .list-icons {
+  background: none;
+  left: auto;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+}
+.view-article .list-icons .addthis_toolbox {
+  display: none;
+}
+.view-article .list-icons .menu-edit ul li.print-icon a {
+  background: none;
+  color: #fc615d;
+  height: 30px;
+  width: 30px;
+}
+.view-article .list-icons .menu-edit ul li.print-icon a:hover,
+.view-article .list-icons .menu-edit ul li.print-icon a:focus,
+.view-article .list-icons .menu-edit ul li.print-icon a:active {
+  background: none;
+  color: #800000;
+}
+.view-article .fb-comments {
+  display: none;
+}
+
